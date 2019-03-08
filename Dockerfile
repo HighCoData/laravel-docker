@@ -21,4 +21,7 @@ RUN apk del -f .build-deps
 
 RUN rm -rf /var/cache/apk/*
 
+# Set PATH Correctly
+ENV PATH ./vendor/bin:$PATH
+
 WORKDIR /var/www
